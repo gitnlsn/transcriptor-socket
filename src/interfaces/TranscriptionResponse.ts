@@ -1,6 +1,8 @@
 import { Speech } from "./Speech";
+import { TranscriptionStatus } from "./TranscriptionsStatus";
 
 export interface TranscriptionResponse {
-  status: "transcribed" | "exceeded-file-size" | "internal-server-error";
+  status: TranscriptionStatus;
+
   speeches: Speech[];
 }
